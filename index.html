@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Songs To Your Eyes — Composer Delivery Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #D8D4BC;
+      --bg-2:     #C9C4AB;
+      --ink:      #1A1A1A;
+      --ink-soft: #2A2A2A;
+      --muted:    rgba(26, 26, 26, 0.55);
+      --line:     rgba(26, 26, 26, 0.18);
+      --accent:   #E76814;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    img { max-width: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Manrope', -apple-system, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 36px 48px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img.logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    header .header-text {
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+    }
+
+    header .header-text h1 {
+      font-family: 'Antonio', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    header .header-text p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    /* ── HERO BAND ── */
+    .hero-band {
+      background: var(--ink);
+      color: var(--bg);
+      padding: 52px 48px;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .hero-band h2 {
+      font-family: 'Antonio', sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    .hero-band h2 span { color: var(--accent); }
+
+    .hero-band p {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: rgba(216, 212, 188, 0.65);
+      max-width: 560px;
+      font-weight: 300;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 48px 100px;
+    }
+
+    /* ── SECTION ── */
+    section {
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h2.section-title {
+      font-family: 'Antonio', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3.sub-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 28px 0 10px;
+    }
+
+    p.body-text {
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    /* ── SPEC GRID ── */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .spec-item {
+      background: var(--bg);
+      padding: 18px 16px;
+    }
+
+    .spec-item .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .spec-item .value {
+      font-family: 'Antonio', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .spec-item.accent-item .value { color: var(--accent); }
+
+    /* ── LIST ── */
+    ul.item-list {
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    ul.item-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+    }
+
+    ul.item-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    ul.item-list li strong {
+      color: var(--ink);
+      font-weight: 600;
+      min-width: 200px;
+      flex-shrink: 0;
+    }
+
+    /* ── BADGES ── */
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .badge-req  { background: var(--accent); color: white; }
+    .badge-voc  { background: var(--ink); color: var(--bg); }
+    .badge-opt  { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+
+    /* ── CODE BLOCKS ── */
+    .code-block {
+      background: var(--ink);
+      color: var(--bg);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 14px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      line-height: 2;
+      border-left: 3px solid var(--accent);
+    }
+
+    .code-block .hi   { color: var(--accent); font-weight: 500; }
+    .code-block .dim  { color: rgba(216, 212, 188, 0.45); font-size: 0.75rem; }
+    .code-block .ex   { color: rgba(216, 212, 188, 0.75); }
+
+    /* ── TREE ── */
+    .tree {
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 22px 26px;
+      margin: 14px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      line-height: 2;
+      color: var(--ink-soft);
+      border-left: 3px solid var(--ink);
+    }
+
+    .tree .folder { color: var(--ink); font-weight: 700; }
+    .tree .file   { color: var(--ink-soft); }
+    .tree .note   { color: var(--muted); font-style: italic; }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: rgba(231, 104, 20, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .callout strong { color: var(--ink); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(216, 212, 188, 0.55);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    footer a { color: var(--accent); }
+
+    @media (max-width: 700px) {
+      header { padding: 24px; }
+      .hero-band { padding: 40px 24px; }
+      main { padding: 40px 24px 80px; }
+      .spec-grid { grid-template-columns: repeat(2, 1fr); }
+      ul.item-list li strong { min-width: 140px; }
+      footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img class="logo" src="https://www.songstoyoureyes.com/images/logo-3d.png" alt="Songs To Your Eyes" />
+  <div class="header-text">
+    <h1>Songs To Your Eyes</h1>
+    <p>Composer Delivery Guide &nbsp;·&nbsp; 2026</p>
+  </div>
+</header>
+
+<!-- HERO BAND -->
+<div class="hero-band">
+  <h2>Delivery<br><span>Specifications</span></h2>
+  <p>Everything you need to know to deliver your album correctly. Read this in full before preparing your files.</p>
+</div>
+
+<main>
+
+  <!-- AUDIO SPECS -->
+  <section>
+    <div class="section-label">01</div>
+    <h2 class="section-title">Audio Specifications</h2>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="label">Format</div>
+        <div class="value">WAV</div>
+      </div>
+      <div class="spec-item">
+        <div class="label">Sample Rate</div>
+        <div class="value">48 kHz</div>
+      </div>
+      <div class="spec-item">
+        <div class="label">Bit Depth</div>
+        <div class="value">24-bit</div>
+      </div>
+      <div class="spec-item accent-item">
+        <div class="label">Master Bus</div>
+        <div class="value">Unmastered</div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>No limiter or multiband compression on the master bus.</strong> Deliver your mix open — we handle the mastering.
+    </div>
+  </section>
+
+  <!-- FILE NAMING -->
+  <section>
+    <div class="section-label">02</div>
+    <h2 class="section-title">File Naming</h2>
+    <p class="body-text">Every file name begins with the track name followed by the BPM and key. Use this exact format:</p>
+
+    <div class="code-block">
+      <span class="hi">TrackName BpmKey</span><br>
+      <br>
+      <span class="dim">If your track is called "Distant Light", is 114 BPM, and is in E minor:</span><br>
+      <strong style="color: #fff;">Distant Light 114Bpm Em</strong><br>
+      <br>
+      <span class="dim">More examples:</span><br>
+      <span class="ex">Suffocation 80Bpm Gm</span><br>
+      <span class="ex">The Asylum 80Bpm Am</span><br>
+      <span class="ex">Change Is A Constant 116Bpm Am</span>
+    </div>
+
+    <ul class="item-list">
+      <li><strong>Track name</strong> Title case — every word capitalised (e.g. <em>Distant Light</em>)</li>
+      <li><strong>BPM</strong> Number followed immediately by "Bpm" (e.g. <em>114Bpm</em>)</li>
+      <li><strong>Key</strong> Root note + mode abbreviation (e.g. <em>Em</em>, <em>Am</em>, <em>G#m</em>, <em>C</em>)</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Do not include</strong> an album number, track number, or any other prefix. We assign those internally.
+    </div>
+
+    <h3 class="sub-title">Alt Mix &amp; Stem Naming</h3>
+    <p class="body-text">Append the version name after a space-dash-space:</p>
+    <div class="code-block">
+      <span class="hi">TrackName BpmKey - Version</span><br>
+      <br>
+      <span class="ex">Distant Light 114Bpm Em - No Drums Mix.wav</span><br>
+      <span class="ex">Distant Light 114Bpm Em - Drums STEM.wav</span>
+    </div>
+
+    <div class="callout">
+      <strong>Capitalisation rule:</strong> Every word begins with a capital letter and the remaining letters are lowercase — except <strong>STEM</strong>, which is always fully capitalised. For example: <em>No Drums Mix</em>, <em>Bass STEM</em>, <em>Drums And Bass Only Mix</em>.
+    </div>
+  </section>
+
+  <!-- FOLDER STRUCTURE -->
+  <section>
+    <div class="section-label">03</div>
+    <h2 class="section-title">Folder Structure</h2>
+    <p class="body-text">Deliver all files in a single folder. Name the folder using your name, your proposed album name, and today's date, separated by underscores:</p>
+
+    <div class="code-block">
+      <span class="hi">Composer Name_Proposed Album Name_YYYY.MM.DD</span><br>
+      <br>
+      <span class="dim">Example:</span><br>
+      <span class="ex">John Smith_Epic Cinematic_2026.05.08</span>
+    </div>
+
+    <p class="body-text">Place every file — full mixes, alts, stems, and cut downs — directly inside this one folder, with no sub-folders:</p>
+
+    <div class="tree">
+      <span class="folder">John Smith_Epic Cinematic_2026.05.08/</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em.wav</span> <span class="note">← Full Mix</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - No Drums Mix.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - No Melody Mix.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - Underscore Mix.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - Drums And Bass Only Mix.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - Drums STEM.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - Bass STEM.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Distant Light 114Bpm Em - [Instrument] STEM.wav</span><br>
+      &nbsp;&nbsp;<span class="file">Suffocation 80Bpm Gm.wav</span> <span class="note">← next track Full Mix</span><br>
+      &nbsp;&nbsp;<span class="file">Suffocation 80Bpm Gm - No Drums Mix.wav</span><br>
+      &nbsp;&nbsp;<span class="note">... and so on for all tracks</span>
+    </div>
+  </section>
+
+  <!-- FULL MIX & ALTS -->
+  <section>
+    <div class="section-label">04</div>
+    <h2 class="section-title">Full Mix &amp; Alts</h2>
+    <p class="body-text">The following versions are required for every track:</p>
+
+    <ul class="item-list">
+      <li><strong>Full Mix <span class="badge badge-req">Required</span></strong> Your complete final mix</li>
+      <li><strong>No Drums Mix <span class="badge badge-req">Required</span></strong> Remove all drums and percussion</li>
+      <li><strong>No Melody Mix <span class="badge badge-req">Required</span></strong> Remove lead melodies and main melodic elements</li>
+      <li><strong>Underscore Mix <span class="badge badge-req">Required</span></strong> Stripped-down version — pads, atmosphere and texture only</li>
+      <li><strong>Drums And Bass Only Mix <span class="badge badge-req">Required</span></strong> Drums and bass in isolation</li>
+      <li><strong>No Vocals Mix <span class="badge badge-voc">Vocal tracks only</span></strong> Full instrumental, no vocal elements</li>
+    </ul>
+
+    <div class="callout">
+      All alt mixes must sum to the same level as the Full Mix. Do not rebalance or re-process individual elements when removing them.
+    </div>
+  </section>
+
+  <!-- STEMS -->
+  <section>
+    <div class="section-label">05</div>
+    <h2 class="section-title">Stems</h2>
+    <p class="body-text">Deliver grouped stems — not individual instrument tracks. Group related elements together. The word <strong>STEM</strong> must be fully capitalised in every file name.</p>
+
+    <ul class="item-list">
+      <li><strong>Drums STEM</strong> All drum and percussion layers combined</li>
+      <li><strong>Bass STEM</strong> All bass elements combined</li>
+      <li><strong>Keys STEM</strong> Piano, keys, organ (if applicable)</li>
+      <li><strong>Synths STEM</strong> Synthesiser layers (if applicable)</li>
+      <li><strong>Strings STEM</strong> String section (if applicable)</li>
+      <li><strong>Brass STEM</strong> Brass and woodwind (if applicable)</li>
+      <li><strong>Guitar STEM</strong> Electric and acoustic guitar (if applicable)</li>
+      <li><strong>SFX STEM</strong> Sound design, atmospheres, risers, impacts</li>
+      <li><strong>Pads STEM</strong> Background pads and drones (if applicable)</li>
+      <li><strong>Vocals STEM <span class="badge badge-voc">Vocal tracks only</span></strong> All vocal elements combined</li>
+    </ul>
+
+    <div class="callout">
+      Only deliver stems relevant to your track — do not include empty or near-silent files. When all stems are summed together, the result must match the Full Mix exactly.
+    </div>
+  </section>
+
+  <!-- CUT DOWNS -->
+  <section>
+    <div class="section-label">06</div>
+    <h2 class="section-title">Cut Downs</h2>
+    <p class="body-text">Cut downs are not required for every album. <strong>If you are unsure whether your album requires them, please ask before you begin delivery.</strong></p>
+    <p class="body-text">When requested, deliver the following durations:</p>
+
+    <ul class="item-list">
+      <li><strong>30 second</strong> Named <em>TrackName BpmKey - 30s.wav</em></li>
+      <li><strong>60 second</strong> Named <em>TrackName BpmKey - 60s.wav</em></li>
+    </ul>
+
+    <div class="callout">
+      The final hit of each cut down should land 1–2 seconds before the end, with a tail that resolves naturally. Do not hard-cut the ending.
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="section-label">07</div>
+    <h2 class="section-title">Questions</h2>
+    <p class="body-text">If anything in this guide is unclear, or if you are unsure about cut downs or any other requirement for your specific album, reach out before you begin:</p>
+    <p class="body-text" style="margin-top: 8px;">
+      <a href="mailto:opher@songstoyoureyes.com" style="color: var(--accent); font-weight: 600;">opher@songstoyoureyes.com</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <span>© Songs To Your Eyes Ltd.</span>
+  <a href="mailto:opher@songstoyoureyes.com">opher@songstoyoureyes.com</a>
+</footer>
+
+</body>
+</html>
