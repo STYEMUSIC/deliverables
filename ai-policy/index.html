@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Songs To Your Eyes — AI &amp; Original Authorship Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #D8D4BC;
+      --bg-2:     #C9C4AB;
+      --ink:      #1A1A1A;
+      --ink-soft: #2A2A2A;
+      --muted:    rgba(26, 26, 26, 0.55);
+      --line:     rgba(26, 26, 26, 0.18);
+      --accent:   #E76814;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    img { max-width: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Manrope', -apple-system, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 36px 48px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header img.logo {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    header .header-text {
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+    }
+
+    header .header-text h1 {
+      font-family: 'Antonio', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    header .header-text p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    /* ── HERO BAND ── */
+    .hero-band {
+      background: var(--ink);
+      color: var(--bg);
+      padding: 52px 48px;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .hero-band h2 {
+      font-family: 'Antonio', sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    .hero-band h2 span { color: var(--accent); }
+
+    .hero-band p {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: rgba(216, 212, 188, 0.65);
+      max-width: 600px;
+      font-weight: 300;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 48px 100px;
+    }
+
+    /* ── SECTION ── */
+    section {
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h2.section-title {
+      font-family: 'Antonio', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3.sub-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 28px 0 10px;
+    }
+
+    p.body-text {
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    /* ── LIST ── */
+    ul.item-list {
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    ul.item-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+    }
+
+    ul.item-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    ul.item-list li strong {
+      color: var(--ink);
+      font-weight: 600;
+      min-width: 210px;
+      flex-shrink: 0;
+    }
+
+    /* prohibited list uses a contrasting marker */
+    ul.item-list.no-list li::before { content: '✕'; color: var(--accent); font-size: 0.85rem; }
+
+    /* ── BADGES ── */
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      margin-left: 6px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .badge-no  { background: var(--accent); color: white; }
+    .badge-ok  { background: var(--ink); color: var(--bg); }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: rgba(231, 104, 20, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 4px 4px 0;
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .callout strong { color: var(--ink); }
+
+    /* OK callout — darker accent rail for the "acceptable" note */
+    .callout.ok {
+      background: rgba(26, 26, 26, 0.05);
+      border-left-color: var(--ink);
+    }
+
+    /* ── RISK CARD ── */
+    .risk {
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      padding: 18px 22px;
+      margin: 14px 0;
+    }
+
+    .risk .risk-head {
+      font-family: 'Antonio', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .risk p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: rgba(216, 212, 188, 0.55);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    footer a { color: var(--accent); }
+
+    @media (max-width: 700px) {
+      header { padding: 24px; }
+      .hero-band { padding: 40px 24px; }
+      main { padding: 40px 24px 80px; }
+      ul.item-list li { flex-wrap: wrap; }
+      ul.item-list li strong { min-width: 100%; }
+      footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <img class="logo" src="https://www.songstoyoureyes.com/images/logo-3d.png" alt="Songs To Your Eyes" />
+  <div class="header-text">
+    <h1>Songs To Your Eyes</h1>
+    <p>AI &amp; Original Authorship — Composer Policy &nbsp;·&nbsp; 2026</p>
+  </div>
+</header>
+
+<!-- HERO BAND -->
+<div class="hero-band">
+  <h2>Human,<br><span>Handmade Music</span></h2>
+  <p>Our position on AI in the music we publish. Please read this in full before you deliver — it protects your rights, our catalog, and everyone's income.</p>
+</div>
+
+<main>
+
+  <!-- 01 OUR POSITION -->
+  <section>
+    <div class="section-label">01</div>
+    <h2 class="section-title">Our Position</h2>
+    <p class="body-text">Artificial intelligence is part of the modern studio, and we are not closing our minds to new technology. We use digital tools every day, and we understand that the boundary between a "tool" and a "generator" can feel blurry.</p>
+    <p class="body-text">But the music we represent has to be <strong>yours</strong> — composed, played, and recorded by a human being. That human authorship is exactly what keeps your work protectable, our catalog clean, and our clients confident. So for everything you deliver to Songs To Your Eyes, we are drawing a clear line.</p>
+  </section>
+
+  <!-- 02 WHERE WE DRAW THE LINE -->
+  <section>
+    <div class="section-label">02</div>
+    <h2 class="section-title">Where We Draw The Line</h2>
+
+    <h3 class="sub-title">What's Acceptable <span class="badge badge-ok">OK</span></h3>
+    <div class="callout ok">
+      Using AI the way you would use any other studio tool — to sketch an idea, find a reference, or get unstuck on a hook — is fine, <strong>as long as you compose, perform, and record the actual music yourself</strong>, and anything AI touched is only a tiny part of the finished piece. This is consistent with how the collecting societies treat creative tools.
+    </div>
+
+    <h3 class="sub-title">What's Not Acceptable <span class="badge badge-no">Prohibited</span></h3>
+    <p class="body-text">The line is crossed the moment AI does the actual creating. For anything you deliver to us, the following are not allowed:</p>
+    <ul class="item-list no-list">
+      <li><strong>Generative composition</strong> Creating melodies, chords, beats, arrangements, lyrics, or vocals with AI.</li>
+      <li><strong>AI-produced parts</strong> Whole tracks, instruments, or vocal lines generated by tools rather than performed.</li>
+      <li><strong>"Enhancing" with Suno / Udio &amp; similar</strong> Running your human recordings through generative tools to upscale, finish, or "improve" them. This re-renders the audio as effectively 100% AI — it becomes unsuitable for DSPs and is flagged instantly by AI scanners.</li>
+    </ul>
+  </section>
+
+  <!-- 03 WHY THIS MATTERS -->
+  <section>
+    <div class="section-label">03</div>
+    <h2 class="section-title">Why This Matters</h2>
+    <p class="body-text">This isn't about taste — it's about keeping your work, and the whole catalog, legally and commercially safe:</p>
+
+    <div class="risk">
+      <div class="risk-head">Copyright &amp; Personal Liability</div>
+      <p>Purely AI-generated material is not eligible for copyright protection, because it lacks the human authorship the law requires. Most AI platforms' terms of service place the legal risk on <em>you</em> in the event of an infringement claim, and some explicitly forbid commercial use or claim ownership of whatever their tools output.</p>
+    </div>
+
+    <div class="risk">
+      <div class="risk-head">Blocked Delivery &amp; Royalty Clawbacks</div>
+      <p>Distributors now run automated AI detection. Flagged tracks can be blocked before they ever reach a streaming platform — and it goes further: some distributors are retroactively identifying AI tracks and clawing back royalties that have already been paid out.</p>
+    </div>
+
+    <div class="risk">
+      <div class="risk-head">Catalog-Wide Blacklisting</div>
+      <p>Sync, TV, and trailer agencies actively screen submissions with AI-detection software. A single flagged track can damage our reputation and, in the worst case, get an entire catalog — or the company that submitted it — permanently blacklisted. Major trailer houses have already said they will not accept AI content at all.</p>
+    </div>
+  </section>
+
+  <!-- 04 WHAT WE ASK -->
+  <section>
+    <div class="section-label">04</div>
+    <h2 class="section-title">What We Ask Of You</h2>
+    <p class="body-text">Please deliver only music that you genuinely wrote and performed yourself.</p>
+    <div class="callout">
+      <strong>If you used an AI tool anywhere in your process — even a small part — tell us before you deliver.</strong> We would always rather have an honest conversation up front and make the right call together than discover a problem after the music is out in the world. When in doubt, ask first.
+    </div>
+    <p class="body-text">Thank you for understanding, and for the real craftsmanship you bring to every delivery. It's exactly why we work with you.</p>
+  </section>
+
+  <!-- 05 QUESTIONS -->
+  <section>
+    <div class="section-label">05</div>
+    <h2 class="section-title">Questions</h2>
+    <p class="body-text">If anything here is unclear, or you're unsure whether something in your workflow crosses the line, reach out before you begin:</p>
+    <p class="body-text" style="margin-top: 8px;">
+      <a href="mailto:opher@songstoyoureyes.com" style="color: var(--accent); font-weight: 600;">opher@songstoyoureyes.com</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <span>© Songs To Your Eyes Ltd. &nbsp;·&nbsp; Human, Handmade Music</span>
+  <a href="mailto:opher@songstoyoureyes.com">opher@songstoyoureyes.com</a>
+</footer>
+
+</body>
+</html>
